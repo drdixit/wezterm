@@ -52,4 +52,40 @@ config.default_domain = "WSL:Ubuntu" -- Launches WSL Ubuntu by default
 config.enable_tab_bar = false
 config.audible_bell = "Disabled"
 
+config.keys = {
+	-- Pass through Ctrl+Shift+H/J/K/L to tmux
+	{
+		key = "h",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SendKey({
+			key = "h",
+			mods = "CTRL|SHIFT",
+		}),
+	},
+	{
+		key = "j",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SendKey({
+			key = "j",
+			mods = "CTRL|SHIFT",
+		}),
+	},
+	{
+		key = "k",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SendKey({
+			key = "k",
+			mods = "CTRL|SHIFT",
+		}),
+	},
+	{
+		key = "l",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SendKey({
+			key = "l",
+			mods = "CTRL|SHIFT",
+		}),
+	},
+}
+
 return config
